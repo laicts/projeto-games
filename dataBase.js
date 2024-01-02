@@ -1,10 +1,14 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
+
 
 
 async function connectData() {
     try { 
         console.log("Conection with data started")
-        await mongoose.connect('mongodb+srv://laisvictoriacts:dSdFMbuEZ9hS9tyv@clustergames.5brqfyv.mongodb.net/?retryWrites=true&w=majority')
+
+        await mongoose.connect(process.env.MONGO_URL)
+        
         console.log("Conection with data is sucessful")
 } catch (error) {
     console.log(error)

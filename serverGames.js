@@ -72,7 +72,7 @@ async function gameDelete (request, response) {
 }
 
 
-// chamada da porta
+//chamada da porta
 function showPort () {
     console.log("Server ir running on port: ", PORT)
 }
