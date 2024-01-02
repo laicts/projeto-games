@@ -78,7 +78,10 @@ function showPort () {
 }
 
 //ROTAS 
-
+app.use(router.get('/serverGames', showGames))
+app.use(router.post('/serverGames', creatGame))
+app.use(router.patch('/serverGames/:id', updateGame))
+app.use(router.delete('/serverGames/:id', gameDelete))
 
 
 app.listen(PORT, showPort)
